@@ -10,9 +10,9 @@ module Danbooru
     # The name of this Danbooru.
     def app_name
       if CurrentUser.safe_mode?
-        "Safebooru"
+        "Barabooru"
       else
-        "Danbooru"
+        "Barabooru"
       end
     end
 
@@ -23,7 +23,7 @@ module Danbooru
 
     # Contact email address of the admin.
     def contact_email
-      "webmaster@#{server_host}"
+      "bara.booru@mail.ru"
     end
 
     def upgrade_account_email
@@ -103,7 +103,7 @@ module Danbooru
 
     # Members cannot post more than X comments in an hour.
     def member_comment_limit
-      2
+      10
     end
 
     # Determines who can see ads.
@@ -141,7 +141,7 @@ module Danbooru
 
     # Maximum size of an upload.
     def max_file_size
-      30.megabytes
+      20.megabytes
     end
 
     def member_comment_time_threshold
